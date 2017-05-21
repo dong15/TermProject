@@ -12,6 +12,7 @@
 		780562ED1EC15F19007F1DAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 780562EB1EC15F19007F1DAE /* Main.storyboard */; };
 		780562EF1EC15F19007F1DAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 780562EE1EC15F19007F1DAE /* Assets.xcassets */; };
 		780562F21EC15F19007F1DAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 780562F01EC15F19007F1DAE /* LaunchScreen.storyboard */; };
+		788DAE811EC2FB3800346695 /* GoodFoodTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788DAE801EC2FB3800346695 /* GoodFoodTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		780562EE1EC15F19007F1DAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		780562F11EC15F19007F1DAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		780562F31EC15F19007F1DAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		788DAE801EC2FB3800346695 /* GoodFoodTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoodFoodTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				780562EE1EC15F19007F1DAE /* Assets.xcassets */,
 				780562F01EC15F19007F1DAE /* LaunchScreen.storyboard */,
 				780562F31EC15F19007F1DAE /* Info.plist */,
+				788DAE801EC2FB3800346695 /* GoodFoodTableViewController.swift */,
 			);
 			path = TermProject;
 			sourceTree = "<group>";
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				780562EA1EC15F19007F1DAE /* ViewController.swift in Sources */,
+				788DAE811EC2FB3800346695 /* GoodFoodTableViewController.swift in Sources */,
 				780562E81EC15F19007F1DAE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,6 +308,7 @@
 				780562F81EC15F19007F1DAE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
