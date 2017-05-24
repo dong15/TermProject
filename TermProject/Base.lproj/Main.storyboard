@@ -38,7 +38,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="O2O-va-qeK" kind="show" id="Ka2-FP-XwJ"/>
+                                            <segue destination="O2O-va-qeK" kind="show" identifier="segueToGood" id="Ka2-FP-XwJ"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="모범음식점" textLabel="1Lb-CE-3qX" style="IBUITableViewCellStyleDefault" id="7OQ-Ie-Xmh">
@@ -75,7 +75,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="ncl-4k-PEt" kind="show" id="lz7-Bq-0BL"/>
+                                            <segue destination="ncl-4k-PEt" kind="show" identifier="segueToWeather" id="lz7-Bq-0BL"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="자전거 대여정보" textLabel="Ge1-U7-2It" style="IBUITableViewCellStyleDefault" id="2wW-dq-287">
@@ -95,7 +95,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="Th7-Cc-ycN" kind="show" id="qHn-3W-1ZM"/>
+                                            <segue destination="Th7-Cc-ycN" kind="show" identifier="segueToMapbic" id="qHn-3W-1ZM"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="주변 약국정보" textLabel="9eh-vb-DyW" style="IBUITableViewCellStyleDefault" id="AzD-aD-ndt">
@@ -115,7 +115,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="PJ4-dc-aBu" kind="show" id="TJ2-OG-rNu"/>
+                                            <segue destination="PJ4-dc-aBu" kind="show" identifier="segueToMapDoc" id="TJ2-OG-rNu"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -132,10 +132,10 @@
             </objects>
             <point key="canvasLocation" x="2021.5999999999999" y="-482.60869565217394"/>
         </scene>
-        <!--View Controller-->
+        <!--자전거 대여정보-->
         <scene sceneID="7aF-Lg-x7Q">
             <objects>
-                <viewController id="Th7-Cc-ycN" sceneMemberID="viewController">
+                <viewController title="자전거 대여정보" id="Th7-Cc-ycN" customClass="BicMapViewController" customModule="TermProject" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NSt-up-BDI"/>
                         <viewControllerLayoutGuide type="bottom" id="nTm-o3-9eI"/>
@@ -145,7 +145,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="3xF-Ix-pDm">
-                                <rect key="frame" x="16" y="20" width="343" height="647"/>
+                                <rect key="frame" x="16" y="64" width="343" height="603"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -156,6 +156,9 @@
                             <constraint firstItem="nTm-o3-9eI" firstAttribute="top" secondItem="3xF-Ix-pDm" secondAttribute="bottom" id="loa-yO-jl8"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="3xF-Ix-pDm" id="1dn-vc-26S"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u2o-lv-INo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -235,10 +238,10 @@
             </objects>
             <point key="canvasLocation" x="1082.4000000000001" y="-482.60869565217394"/>
         </scene>
-        <!--View Controller-->
+        <!--주변 약국정보-->
         <scene sceneID="eNl-gf-En2">
             <objects>
-                <viewController id="PJ4-dc-aBu" sceneMemberID="viewController">
+                <viewController title="주변 약국정보" id="PJ4-dc-aBu" customClass="DocMapViewController" customModule="TermProject" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oGX-Rp-H5r"/>
                         <viewControllerLayoutGuide type="bottom" id="Ppi-fv-075"/>
@@ -248,7 +251,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="REz-ux-9SU">
-                                <rect key="frame" x="16" y="20" width="343" height="647"/>
+                                <rect key="frame" x="16" y="64" width="343" height="603"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -259,6 +262,9 @@
                             <constraint firstItem="REz-ux-9SU" firstAttribute="top" secondItem="oGX-Rp-H5r" secondAttribute="bottom" id="xdc-fi-j9E"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="REz-ux-9SU" id="MhL-r2-iWi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kty-uM-QEm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
