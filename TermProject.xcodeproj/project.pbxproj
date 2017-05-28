@@ -15,6 +15,7 @@
 		788DAE811EC2FB3800346695 /* GoodFoodTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788DAE801EC2FB3800346695 /* GoodFoodTableViewController.swift */; };
 		78F63E401ED56CC3002360BB /* DocMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F63E3F1ED56CC3002360BB /* DocMapViewController.swift */; };
 		78F63E421ED56D25002360BB /* BicMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F63E411ED56D25002360BB /* BicMapViewController.swift */; };
+		78F63E441EDB0A58002360BB /* BicTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F63E431EDB0A58002360BB /* BicTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		788DAE801EC2FB3800346695 /* GoodFoodTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoodFoodTableViewController.swift; sourceTree = "<group>"; };
 		78F63E3F1ED56CC3002360BB /* DocMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocMapViewController.swift; sourceTree = "<group>"; };
 		78F63E411ED56D25002360BB /* BicMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BicMapViewController.swift; sourceTree = "<group>"; };
+		78F63E431EDB0A58002360BB /* BicTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BicTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				788DAE801EC2FB3800346695 /* GoodFoodTableViewController.swift */,
 				78F63E3F1ED56CC3002360BB /* DocMapViewController.swift */,
 				78F63E411ED56D25002360BB /* BicMapViewController.swift */,
+				78F63E431EDB0A58002360BB /* BicTableViewController.swift */,
 			);
 			path = TermProject;
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 			files = (
 				78F63E421ED56D25002360BB /* BicMapViewController.swift in Sources */,
 				78F63E401ED56CC3002360BB /* DocMapViewController.swift in Sources */,
+				78F63E441EDB0A58002360BB /* BicTableViewController.swift in Sources */,
 				780562EA1EC15F19007F1DAE /* ViewController.swift in Sources */,
 				788DAE811EC2FB3800346695 /* GoodFoodTableViewController.swift in Sources */,
 				780562E81EC15F19007F1DAE /* AppDelegate.swift in Sources */,

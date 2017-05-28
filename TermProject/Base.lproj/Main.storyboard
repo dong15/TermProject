@@ -95,7 +95,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="Th7-Cc-ycN" kind="show" identifier="segueToMapbic" id="qHn-3W-1ZM"/>
+                                            <segue destination="ICg-uc-WtS" kind="show" identifier="segueToBicTable" id="HgV-Lw-m5a"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="주변 약국정보" textLabel="9eh-vb-DyW" style="IBUITableViewCellStyleDefault" id="AzD-aD-ndt">
@@ -162,7 +162,61 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u2o-lv-INo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2224" y="267"/>
+            <point key="canvasLocation" x="2690" y="1110"/>
+        </scene>
+        <!--자전거 대여정보 TableView-->
+        <scene sceneID="rcs-F0-luF">
+            <objects>
+                <tableViewController id="HDj-7C-f8g" customClass="BicTableViewController" customModule="TermProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="BEi-GB-cLC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="5Te-gV-sAp" detailTextLabel="cld-1W-8Hs" style="IBUITableViewCellStyleSubtitle" id="ggw-8b-kc3">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ggw-8b-kc3" id="Gys-aB-YxI">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5Te-gV-sAp">
+                                            <rect key="frame" x="15" y="5" width="33.5" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cld-1W-8Hs">
+                                            <rect key="frame" x="15" y="25.5" width="44" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="HDj-7C-f8g" id="AUt-rg-qq9"/>
+                            <outlet property="delegate" destination="HDj-7C-f8g" id="H6C-iN-pqn"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="자전거 대여정보 TableView" id="eMR-Q5-f9D">
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="bJy-eZ-hhV">
+                            <connections>
+                                <segue destination="Th7-Cc-ycN" kind="show" id="KI8-Mc-Ir7"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="taData" destination="BEi-GB-cLC" id="XAz-fY-QSQ"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c8q-N9-aez" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3327.1999999999998" y="277.51124437781112"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="fMx-Ms-mYg">
@@ -190,7 +244,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fYq-uL-qPc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3140" y="-55"/>
+            <point key="canvasLocation" x="4079.1999999999998" y="-55.322338830584712"/>
         </scene>
         <!--Good Food Table View Controller-->
         <scene sceneID="aCX-EO-KL9">
@@ -269,6 +323,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kty-uM-QEm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1470" y="278"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="6VH-pa-UJQ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ICg-uc-WtS" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="E96-gh-q0W">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="HDj-7C-f8g" kind="relationship" relationship="rootViewController" id="VUN-FO-mxb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tqC-Ol-D8X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2388" y="277.51124437781112"/>
         </scene>
     </scenes>
 </document>
