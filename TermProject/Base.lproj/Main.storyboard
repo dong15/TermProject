@@ -95,7 +95,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="ICg-uc-WtS" kind="show" identifier="segueToBicTable" id="HgV-Lw-m5a"/>
+                                            <segue destination="HDj-7C-f8g" kind="show" identifier="segueToBicTableView" id="TaP-BF-7XU"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="주변 약국정보" textLabel="9eh-vb-DyW" style="IBUITableViewCellStyleDefault" id="AzD-aD-ndt">
@@ -115,7 +115,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="t9I-o1-aIa" kind="show" identifier="segueToDocTable" id="8hI-ux-vLM"/>
+                                            <segue destination="5ar-wX-Tdp" kind="show" identifier="segueToDocTableView" id="ZP5-S4-XId"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -204,11 +204,6 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="자전거 대여정보 TableView" id="eMR-Q5-f9D">
-                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="done" id="ukJ-KC-kiF">
-                            <connections>
-                                <segue destination="Jvk-jU-fZc" kind="show" id="2Dp-Ia-Bva"/>
-                            </connections>
-                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="search" id="bJy-eZ-hhV">
                             <connections>
                                 <segue destination="Th7-Cc-ycN" kind="show" identifier="segueToBicMap" id="KI8-Mc-Ir7"/>
@@ -223,21 +218,37 @@
             </objects>
             <point key="canvasLocation" x="4266.3999999999996" y="277.51124437781112"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Weather Table View Controller-->
         <scene sceneID="fMx-Ms-mYg">
             <objects>
-                <tableViewController id="ncl-4k-PEt" sceneMemberID="viewController">
+                <tableViewController id="ncl-4k-PEt" customClass="WeatherTableViewController" customModule="TermProject" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="d9a-zh-JAh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Nco-VP-0t2">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="E8A-9s-ydb" detailTextLabel="Pme-19-LSS" style="IBUITableViewCellStyleSubtitle" id="Nco-VP-0t2">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Nco-VP-0t2" id="ibe-AC-RaF">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="E8A-9s-ydb">
+                                            <rect key="frame" x="15" y="5" width="33.5" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Pme-19-LSS">
+                                            <rect key="frame" x="15" y="25.5" width="44" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -246,10 +257,13 @@
                             <outlet property="delegate" destination="ncl-4k-PEt" id="RB2-Bw-od1"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="taData" destination="d9a-zh-JAh" id="5Wc-U6-KVl"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fYq-uL-qPc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5018.3999999999996" y="-55.322338830584712"/>
+            <point key="canvasLocation" x="4266" y="-483"/>
         </scene>
         <!--Good Food Table View Controller-->
         <scene sceneID="aCX-EO-KL9">
@@ -419,11 +433,6 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="약국정보" id="hem-RS-R49">
-                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="done" id="M6Q-9o-Ryz">
-                            <connections>
-                                <segue destination="Jvk-jU-fZc" kind="show" id="P2K-pV-gag"/>
-                            </connections>
-                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="search" id="sZo-Pq-rzf">
                             <connections>
                                 <segue destination="PJ4-dc-aBu" kind="show" identifier="segueToMapView" id="Hmy-AC-H3H"/>
@@ -438,44 +447,5 @@
             </objects>
             <point key="canvasLocation" x="1526" y="1054"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="6VH-pa-UJQ">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ICg-uc-WtS" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="E96-gh-q0W">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="HDj-7C-f8g" kind="relationship" relationship="rootViewController" id="VUN-FO-mxb"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tqC-Ol-D8X" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3327.1999999999998" y="277.51124437781112"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="wyc-lx-rjc">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="t9I-o1-aIa" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XFl-0t-cg7">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="5ar-wX-Tdp" kind="relationship" relationship="rootViewController" id="owd-nZ-aJU"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cmA-1S-KT0" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1525.5999999999999" y="285.60719640179911"/>
-        </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="P2K-pV-gag"/>
-    </inferredMetricsTieBreakers>
 </document>
