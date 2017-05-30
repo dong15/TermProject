@@ -12,10 +12,14 @@
 		780562ED1EC15F19007F1DAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 780562EB1EC15F19007F1DAE /* Main.storyboard */; };
 		780562EF1EC15F19007F1DAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 780562EE1EC15F19007F1DAE /* Assets.xcassets */; };
 		780562F21EC15F19007F1DAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 780562F01EC15F19007F1DAE /* LaunchScreen.storyboard */; };
+		784A022A1EDD1B5300132970 /* DocLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784A02291EDD1B5300132970 /* DocLocation.swift */; };
+		784A022C1EDD1EDD00132970 /* DocTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784A022B1EDD1EDD00132970 /* DocTableViewController.swift */; };
+		784A022E1EDD22F500132970 /* DetailDocTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784A022D1EDD22F500132970 /* DetailDocTableViewController.swift */; };
 		788DAE811EC2FB3800346695 /* GoodFoodTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788DAE801EC2FB3800346695 /* GoodFoodTableViewController.swift */; };
 		78F63E401ED56CC3002360BB /* DocMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F63E3F1ED56CC3002360BB /* DocMapViewController.swift */; };
 		78F63E421ED56D25002360BB /* BicMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F63E411ED56D25002360BB /* BicMapViewController.swift */; };
 		78F63E441EDB0A58002360BB /* BicTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F63E431EDB0A58002360BB /* BicTableViewController.swift */; };
+		78F63E461EDB40DE002360BB /* BicLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F63E451EDB40DE002360BB /* BicLocation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,10 +30,14 @@
 		780562EE1EC15F19007F1DAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		780562F11EC15F19007F1DAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		780562F31EC15F19007F1DAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		784A02291EDD1B5300132970 /* DocLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocLocation.swift; sourceTree = "<group>"; };
+		784A022B1EDD1EDD00132970 /* DocTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocTableViewController.swift; sourceTree = "<group>"; };
+		784A022D1EDD22F500132970 /* DetailDocTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailDocTableViewController.swift; sourceTree = "<group>"; };
 		788DAE801EC2FB3800346695 /* GoodFoodTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoodFoodTableViewController.swift; sourceTree = "<group>"; };
 		78F63E3F1ED56CC3002360BB /* DocMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocMapViewController.swift; sourceTree = "<group>"; };
 		78F63E411ED56D25002360BB /* BicMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BicMapViewController.swift; sourceTree = "<group>"; };
 		78F63E431EDB0A58002360BB /* BicTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BicTableViewController.swift; sourceTree = "<group>"; };
+		78F63E451EDB40DE002360BB /* BicLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BicLocation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +80,10 @@
 				78F63E3F1ED56CC3002360BB /* DocMapViewController.swift */,
 				78F63E411ED56D25002360BB /* BicMapViewController.swift */,
 				78F63E431EDB0A58002360BB /* BicTableViewController.swift */,
+				78F63E451EDB40DE002360BB /* BicLocation.swift */,
+				784A02291EDD1B5300132970 /* DocLocation.swift */,
+				784A022B1EDD1EDD00132970 /* DocTableViewController.swift */,
+				784A022D1EDD22F500132970 /* DetailDocTableViewController.swift */,
 			);
 			path = TermProject;
 			sourceTree = "<group>";
@@ -150,10 +162,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				78F63E421ED56D25002360BB /* BicMapViewController.swift in Sources */,
+				784A022E1EDD22F500132970 /* DetailDocTableViewController.swift in Sources */,
 				78F63E401ED56CC3002360BB /* DocMapViewController.swift in Sources */,
 				78F63E441EDB0A58002360BB /* BicTableViewController.swift in Sources */,
+				784A022A1EDD1B5300132970 /* DocLocation.swift in Sources */,
 				780562EA1EC15F19007F1DAE /* ViewController.swift in Sources */,
+				78F63E461EDB40DE002360BB /* BicLocation.swift in Sources */,
 				788DAE811EC2FB3800346695 /* GoodFoodTableViewController.swift in Sources */,
+				784A022C1EDD1EDD00132970 /* DocTableViewController.swift in Sources */,
 				780562E81EC15F19007F1DAE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

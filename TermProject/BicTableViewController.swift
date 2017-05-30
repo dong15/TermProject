@@ -19,6 +19,7 @@ class BicTableViewController: UITableViewController, XMLParserDelegate {
     var element = NSString()
     var location = NSMutableString()
     var address = NSMutableString()
+    var numleft = NSMutableString()
     
     func beginParsing()
     {
@@ -38,6 +39,9 @@ class BicTableViewController: UITableViewController, XMLParserDelegate {
             location = ""
             address = NSMutableString()
             address = ""
+            
+            numleft = NSMutableString()
+            numleft = ""
         }
     }
     
@@ -46,6 +50,8 @@ class BicTableViewController: UITableViewController, XMLParserDelegate {
             location.append(string)
         } else if element.isEqual(to: "address") {
             address.append(string)
+        } else if element.isEqual(to: "retal_enable_num") {
+            numleft.append(string)
         }
     }
     
@@ -56,6 +62,9 @@ class BicTableViewController: UITableViewController, XMLParserDelegate {
             }
             if !address.isEqual(nil) {
                 elements.setObject(address, forKey: "address" as NSCopying)
+            }
+            if !numleft.isEqual(nil) {
+                elements.setObject(numleft, forKey: "retal_enable_num" as NSCopying)
             }
             posts.add(elements)
         }
@@ -79,6 +88,14 @@ class BicTableViewController: UITableViewController, XMLParserDelegate {
         cell.textLabel?.text = (posts.object(at: indexPath.row) as AnyObject).value(forKey: "title") as! NSString as String
         cell.detailTextLabel?.text = (posts.object(at: indexPath.row) as AnyObject).value(forKey: "address") as! NSString as String
         return cell as UITableViewCell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segueToBicMap" {
+            if let mapViewController = segue.destination as? BicMapViewController {
+                mapViewController.posts = posts
+            }
+        }
     }
     
     override func viewDidLoad() {
