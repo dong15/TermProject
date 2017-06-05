@@ -12,6 +12,7 @@
 		780562ED1EC15F19007F1DAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 780562EB1EC15F19007F1DAE /* Main.storyboard */; };
 		780562EF1EC15F19007F1DAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 780562EE1EC15F19007F1DAE /* Assets.xcassets */; };
 		780562F21EC15F19007F1DAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 780562F01EC15F19007F1DAE /* LaunchScreen.storyboard */; };
+		7832B8231EE2C9A700236AF6 /* DetailWeatherTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7832B8221EE2C9A700236AF6 /* DetailWeatherTableViewController.swift */; };
 		784A022A1EDD1B5300132970 /* DocLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784A02291EDD1B5300132970 /* DocLocation.swift */; };
 		784A022C1EDD1EDD00132970 /* DocTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784A022B1EDD1EDD00132970 /* DocTableViewController.swift */; };
 		784A022E1EDD22F500132970 /* DetailDocTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784A022D1EDD22F500132970 /* DetailDocTableViewController.swift */; };
@@ -31,6 +32,7 @@
 		780562EE1EC15F19007F1DAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		780562F11EC15F19007F1DAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		780562F31EC15F19007F1DAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7832B8221EE2C9A700236AF6 /* DetailWeatherTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailWeatherTableViewController.swift; sourceTree = "<group>"; };
 		784A02291EDD1B5300132970 /* DocLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocLocation.swift; sourceTree = "<group>"; };
 		784A022B1EDD1EDD00132970 /* DocTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocTableViewController.swift; sourceTree = "<group>"; };
 		784A022D1EDD22F500132970 /* DetailDocTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailDocTableViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				784A022B1EDD1EDD00132970 /* DocTableViewController.swift */,
 				784A022D1EDD22F500132970 /* DetailDocTableViewController.swift */,
 				784A022F1EDDCF8D00132970 /* WeatherTableViewController.swift */,
+				7832B8221EE2C9A700236AF6 /* DetailWeatherTableViewController.swift */,
 			);
 			path = TermProject;
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 				788DAE811EC2FB3800346695 /* GoodFoodTableViewController.swift in Sources */,
 				784A022C1EDD1EDD00132970 /* DocTableViewController.swift in Sources */,
 				780562E81EC15F19007F1DAE /* AppDelegate.swift in Sources */,
+				7832B8231EE2C9A700236AF6 /* DetailWeatherTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

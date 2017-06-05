@@ -27,9 +27,17 @@ class WeatherTableViewController: UITableViewController, XMLParserDelegate {
     
     var fcstTime = NSMutableString()
     
+    var humiValue = NSMutableString()
+    
+    var tempValue = NSMutableString()
+    
     var lat = NSMutableString()
     
     var lon = NSMutableString()
+    
+    var weathername = ""
+    
+    var weathername_utf8 = ""
 
     
     override func viewDidLoad() {
@@ -63,6 +71,10 @@ class WeatherTableViewController: UITableViewController, XMLParserDelegate {
             fcstDate = ""
             fcstTime = NSMutableString()
             fcstTime = ""
+            humiValue = NSMutableString()
+            humiValue = ""
+            tempValue = NSMutableString()
+            tempValue = ""
             
             lat = NSMutableString()
             lat = ""
@@ -76,6 +88,10 @@ class WeatherTableViewController: UITableViewController, XMLParserDelegate {
             fcstDate.append(string)
         } else if element.isEqual(to: "fcstTime") {
             fcstTime.append(string)
+        } else if element.isEqual(to: "humiValue") {
+            humiValue.append(string)
+        } else if element.isEqual(to: "tempValue") {
+            tempValue.append(string)
         } else if element.isEqual(to: "lat") {
             lat.append(string)
         } else if element.isEqual(to: "lon") {
@@ -91,6 +107,12 @@ class WeatherTableViewController: UITableViewController, XMLParserDelegate {
             if !fcstTime.isEqual(nil) {
                 elements.setObject(fcstTime, forKey: "fcstTime" as NSCopying)
             }
+            if !humiValue.isEqual(nil) {
+                elements.setObject(humiValue, forKey: "humiValue" as NSCopying)
+            }
+            if !tempValue.isEqual(nil) {
+                elements.setObject(tempValue, forKey: "tempValue" as NSCopying)
+            }
             if !lat.isEqual(nil) {
                 elements.setObject(lat, forKey: "lat" as NSCopying)
             }
@@ -102,7 +124,18 @@ class WeatherTableViewController: UITableViewController, XMLParserDelegate {
             posts.add(elements)
         }
     }
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segueToWeatherDetail" {
+            if let cell = sender as? UITableViewCell {
+                let indexPath = tableView.indexPath(for: cell)
+                weathername = (posts.object(at: (indexPath?.row)!) as AnyObject).value(forKey: "fcstDate") as! NSString as String
+                weathername_utf8 = weathername.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
+                if let detailWeatherTableViewController = segue.destination as? DetailWeatherTableViewController {
+                    detailWeatherTableViewController.url = url + "&fcstDate=" + weathername_utf8
+                }
+            }
+        }
+    }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         
@@ -121,8 +154,8 @@ class WeatherTableViewController: UITableViewController, XMLParserDelegate {
             cell = Bundle.main.loadNibNamed("Cell", owner: self, options: nil)?[0] as! UITableViewCell;
         }
         
-        cell.textLabel?.text = (posts.object(at: indexPath.row) as AnyObject).value(forKey: "fcstData") as! NSString as String
-        cell.detailTextLabel?.text = (posts.object(at: indexPath.row) as AnyObject).value(forKey: "fcstTime") as! NSString as String
+        cell.textLabel?.text = (posts.object(at: indexPath.row) as AnyObject).value(forKey: "fcstTime") as! NSString as String
+        cell.detailTextLabel?.text = (posts.object(at: indexPath.row) as AnyObject).value(forKey: "humiValue") as! NSString as String
         return cell as UITableViewCell
     }
     

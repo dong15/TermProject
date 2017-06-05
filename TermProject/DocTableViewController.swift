@@ -13,7 +13,12 @@ class DocTableViewController: UITableViewController, XMLParserDelegate {
     @IBOutlet var taData: UITableView!
     
     
-    var url : String = "http://apis.data.go.kr/B552657/ErmctInsttInfoInqireService/getParmacyListInfoInqire?serviceKey=8dzkLURtf3us0Ilf7eEKM5v4JuAyld82MfWecCK0xRWQOdtncpLQ8n8ja1UpdbaARNtc4JVBNnwSsT4ZKz0qqw%3D%3D&Q0=%EC%A0%9C%EC%A3%BC%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84&Q1=%EC%A0%9C%EC%A3%BC%EC%8B%9C&QT=1&ORD=NAME&pageNo=1&startPage=1&numOfRows=10&pageSize=10"
+    var url : String = "http://apis.data.go.kr/B552657/ErmctInsttInfoInqireService/getParmacyListInfoInqire?serviceKey=8dzkLURtf3us0Ilf7eEKM5v4JuAyld82MfWecCK0xRWQOdtncpLQ8n8ja1UpdbaARNtc4JVBNnwSsT4ZKz0qqw%3D%3D&Q0=%EC%A0%9C%EC%A3%BC%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84&Q1=%EC%A0%9C%EC%A3%BC%EC%8B%9C&QT=1&ORD=NAME&pageNo=1&startPage=1&numOfRows=100&pageSize=100"
+    
+    var Durl1 : String = "http://apis.data.go.kr/B552657/ErmctInsttInfoInqireService/getParmacyListInfoInqire?serviceKey=8dzkLURtf3us0Ilf7eEKM5v4JuAyld82MfWecCK0xRWQOdtncpLQ8n8ja1UpdbaARNtc4JVBNnwSsT4ZKz0qqw%3D%3D&Q0=%EC%A0%9C%EC%A3%BC%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84&Q1=%EC%A0%9C%EC%A3%BC%EC%8B%9C&QT=1"
+    var Durl2 : String = "&ORD=NAME&pageNo=1&startPage=1&numOfRows=1&pageSize=1"
+    
+    var FDurl : String = ""
     
     var parser = XMLParser()
     
@@ -113,8 +118,8 @@ class DocTableViewController: UITableViewController, XMLParserDelegate {
                 docname = (posts.object(at: (indexPath?.row)!) as AnyObject).value(forKey: "dutyName") as! NSString as String
                 docname_utf8 = docname.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
                 if let detailDocTableViewController = segue.destination as? DetailDocTableViewController {
-                    detailDocTableViewController.url = url + "&dutyName=" + docname_utf8
-                }
+                    FDurl = Durl1 + "&QN=" + docname_utf8 + Durl2
+                    detailDocTableViewController.url = FDurl                }
             }
         }
     }
