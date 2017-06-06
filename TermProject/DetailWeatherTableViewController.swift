@@ -13,6 +13,10 @@ class DetailWeatherTableViewController: UITableViewController, XMLParserDelegate
     @IBOutlet var detailTableView: UITableView!
     
     var url : String?
+    
+    var key : String?
+    
+    var Fork = true
     var parser = XMLParser()
     
     let postsname : [String] = ["날짜", "시간", "습도", "온도"]
@@ -39,6 +43,7 @@ class DetailWeatherTableViewController: UITableViewController, XMLParserDelegate
         element = elementName as NSString
         if (elementName as NSString).isEqual(to: "list")
         {
+            if (Fork) {
             posts = ["", "", "", ""]
             fcstDate = NSMutableString()
             fcstDate = ""
@@ -49,6 +54,7 @@ class DetailWeatherTableViewController: UITableViewController, XMLParserDelegate
             humiValue = ""
             tempValue = NSMutableString()
             tempValue = ""
+            }
         }
     }
     
@@ -66,17 +72,21 @@ class DetailWeatherTableViewController: UITableViewController, XMLParserDelegate
     
     func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
         if (elementName as NSString).isEqual(to: "list") {
-            if !fcstDate.isEqual(nil) {
-                posts[0] = fcstDate as String
-            }
-            if !fcstTime.isEqual(nil) {
-                posts[1] = fcstTime as String
-            }
-            if !humiValue.isEqual(nil) {
-                posts[2] = humiValue as String
-            }
-            if !tempValue.isEqual(nil) {
-                posts[3] = tempValue as String
+            if fcstTime.isEqual(key)
+            {
+                if !fcstDate.isEqual(nil) {
+                    posts[0] = fcstDate as String
+                }
+                if !fcstTime.isEqual(nil) {
+                    posts[1] = fcstTime as String
+                }
+                if !humiValue.isEqual(nil) {
+                    posts[2] = humiValue as String
+                }
+                if !tempValue.isEqual(nil) {
+                    posts[3] = tempValue as String
+                }
+                Fork = false
             }
         }
     }

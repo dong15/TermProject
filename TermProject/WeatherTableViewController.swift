@@ -128,10 +128,11 @@ class WeatherTableViewController: UITableViewController, XMLParserDelegate {
         if segue.identifier == "segueToWeatherDetail" {
             if let cell = sender as? UITableViewCell {
                 let indexPath = tableView.indexPath(for: cell)
-                weathername = (posts.object(at: (indexPath?.row)!) as AnyObject).value(forKey: "fcstDate") as! NSString as String
-                weathername_utf8 = weathername.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
+                weathername = (posts.object(at: (indexPath?.row)!) as AnyObject).value(forKey: "fcstTime") as! NSString as String
+                //weathername_utf8 = weathername.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
                 if let detailWeatherTableViewController = segue.destination as? DetailWeatherTableViewController {
-                    detailWeatherTableViewController.url = url + "&fcstDate=" + weathername_utf8
+                    detailWeatherTableViewController.url = url
+                    detailWeatherTableViewController.key = weathername
                 }
             }
         }
