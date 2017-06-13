@@ -11,9 +11,18 @@ import UIKit
 class WeatherTableViewController: UITableViewController, XMLParserDelegate {
 
     @IBOutlet var taData: UITableView!
+    var url : String = ""
     
-    var url : String = "http://data.jeju.go.kr/rest/JejuLdapsDataService/getForecastPointDataXY?ServiceKey=8dzkLURtf3us0Ilf7eEKM5v4JuAyld82MfWecCK0xRWQOdtncpLQ8n8ja1UpdbaARNtc4JVBNnwSsT4ZKz0qqw%3D%3D&baseDate=20161026&baseTime=2100&hgtLevel=0&nx=43&ny=31&numOfRows=&37pageNo=1"
+    var url1 : String = "http://data.jeju.go.kr/rest/JejuLdapsDataService/getForecastPointDataXY?ServiceKey=8dzkLURtf3us0Ilf7eEKM5v4JuAyld82MfWecCK0xRWQOdtncpLQ8n8ja1UpdbaARNtc4JVBNnwSsT4ZKz0qqw%3D%3D"
+    var url2 : String = "00&hgtLevel=0&nx=43&ny=31&numOfRows=&37pageNo=1"
+    let now = Date()
     
+    var Ddate = String()
+    
+    var Dtime = String()
+    
+    let date = DateFormatter()
+    let time = DateFormatter()
     
     var parser = XMLParser()
     
@@ -42,7 +51,11 @@ class WeatherTableViewController: UITableViewController, XMLParserDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        date.dateFormat = "yyyyMMdd"
+        time.dateFormat = "HH"
+        Ddate = "&baseDate=" + date.string(from: now)
+        Dtime = "&baseTime=" + time.string(from: now)
+        url = url1 + Ddate + Dtime + url2
         beginParsing()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false

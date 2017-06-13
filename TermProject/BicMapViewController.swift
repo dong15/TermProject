@@ -9,12 +9,17 @@
 import UIKit
 import MapKit
 
-class BicMapViewController: UIViewController, MKMapViewDelegate {
+class BicMapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     
     var posts = NSMutableArray()
     
     let regionRadius: CLLocationDistance = 5000
     
+    var key = 0
+    
+    var lat : Double!
+    
+    var lon : Double!
     
     func centerMapOnLocation(location: CLLocation) {
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, regionRadius * 2.0, regionRadius * 2.0)
@@ -30,20 +35,26 @@ class BicMapViewController: UIViewController, MKMapViewDelegate {
             let location = (post as AnyObject).value(forKey: "title") as! NSString as String
             let address = (post as AnyObject).value(forKey: "address") as! NSString as String
             let numleft = (post as AnyObject).value(forKey: "retal_enable_num") as! NSString as String
-            let Bike = BicLocation(title: location, locationName: address, coordinate: CLLocationCoordinate2D(latitude: 100, longitude: 60))
+            let Bike = BicLocation(title: location, locationName: address, key: key)
             BicLocations.append(Bike)
+            key += 1
         }
     }
 
     @IBOutlet weak var mapView: MKMapView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        
+        let initialLocation = CLLocation(latitude: lat, longitude: lon)
+        
+        centerMapOnLocation(location: initialLocation)
         mapView.delegate = self
         loadInitialData()
         mapView.addAnnotations(BicLocations)
         // Do any additional setup after loading the view.
     }
-    
     
 
     override func didReceiveMemoryWarning() {

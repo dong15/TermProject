@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import CoreLocation
 
-class BicTableViewController: UITableViewController, XMLParserDelegate {
+class BicTableViewController: UITableViewController, XMLParserDelegate, CLLocationManagerDelegate {
     @IBOutlet var taData: UITableView!
     
     var url : String = "http://openapi.jejusi.go.kr/rest/PublicBikeInfoService/getPublicBikeInfoList?serviceKey=8dzkLURtf3us0Ilf7eEKM5v4JuAyld82MfWecCK0xRWQOdtncpLQ8n8ja1UpdbaARNtc4JVBNnwSsT4ZKz0qqw%3D%3D"
@@ -20,6 +21,13 @@ class BicTableViewController: UITableViewController, XMLParserDelegate {
     var location = NSMutableString()
     var address = NSMutableString()
     var numleft = NSMutableString()
+    
+    var lat = 33.492027
+    
+    var lon = 126.72714
+    
+    
+    var locationManager:CLLocationManager!
     
     func beginParsing()
     {
@@ -86,7 +94,7 @@ class BicTableViewController: UITableViewController, XMLParserDelegate {
         }
         
         cell.textLabel?.text = (posts.object(at: indexPath.row) as AnyObject).value(forKey: "title") as! NSString as String
-        cell.detailTextLabel?.text = (posts.object(at: indexPath.row) as AnyObject).value(forKey: "address") as! NSString as String
+        cell.detailTextLabel?.text = (posts.object(at: indexPath.row) as AnyObject).value(forKey: "retal_enable_num") as! NSString as String + ". 대 남음"
         return cell as UITableViewCell
     }
     
@@ -94,6 +102,8 @@ class BicTableViewController: UITableViewController, XMLParserDelegate {
         if segue.identifier == "segueToBicMap" {
             if let mapViewController = segue.destination as? BicMapViewController {
                 mapViewController.posts = posts
+                mapViewController.lat = lat
+                mapViewController.lon = lon
             }
         }
     }
@@ -102,12 +112,23 @@ class BicTableViewController: UITableViewController, XMLParserDelegate {
         super.viewDidLoad()
         
         beginParsing()
+        
+        locationManager = CLLocationManager()
+        locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization() //권한 요청
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.startUpdatingLocation()
+        lat = (locationManager.location?.coordinate.latitude)!
+        lon = (locationManager.location?.coordinate.longitude)!
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

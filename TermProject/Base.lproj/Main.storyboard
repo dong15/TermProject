@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="iz5-LM-4f6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="iz5-LM-4f6">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,45 +20,8 @@
                         <sections>
                             <tableViewSection id="faU-oI-abR">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="착한음식점" textLabel="BIl-Aj-rcL" style="IBUITableViewCellStyleDefault" id="Eyw-Eg-Q2b">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Eyw-Eg-Q2b" id="Lms-4a-q7V">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="착한음식점" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BIl-Aj-rcL">
-                                                    <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="O2O-va-qeK" kind="show" identifier="segueToGood" id="Ka2-FP-XwJ"/>
-                                        </connections>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="모범음식점" textLabel="1Lb-CE-3qX" style="IBUITableViewCellStyleDefault" id="7OQ-Ie-Xmh">
-                                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7OQ-Ie-Xmh" id="h95-0s-nZE">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="모범음식점" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1Lb-CE-3qX">
-                                                    <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="기상정보" textLabel="fRa-5M-Qf0" style="IBUITableViewCellStyleDefault" id="rnC-8b-cEg">
-                                        <rect key="frame" x="0.0" y="88" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rnC-8b-cEg" id="KUS-ZZ-azN">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -79,7 +41,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="자전거 대여정보" textLabel="Ge1-U7-2It" style="IBUITableViewCellStyleDefault" id="2wW-dq-287">
-                                        <rect key="frame" x="0.0" y="132" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2wW-dq-287" id="NKF-hT-wMF">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -99,7 +61,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="주변 약국정보" textLabel="9eh-vb-DyW" style="IBUITableViewCellStyleDefault" id="AzD-aD-ndt">
-                                        <rect key="frame" x="0.0" y="176" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="88" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AzD-aD-ndt" id="FBV-07-GGR">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -115,7 +77,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="5ar-wX-Tdp" kind="show" identifier="segueToDocTableView" id="ZP5-S4-XId"/>
+                                            <segue destination="qHF-cV-W2H" kind="show" id="K4n-H8-SMs"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -145,15 +107,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="3xF-Ix-pDm">
-                                <rect key="frame" x="16" y="64" width="343" height="603"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="3xF-Ix-pDm" firstAttribute="leading" secondItem="aev-3h-BgN" secondAttribute="leadingMargin" id="4m3-WS-yk4"/>
-                            <constraint firstItem="3xF-Ix-pDm" firstAttribute="top" secondItem="NSt-up-BDI" secondAttribute="bottom" id="9Cp-ld-aLo"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="3xF-Ix-pDm" secondAttribute="trailing" id="SQi-Eo-ydc"/>
-                            <constraint firstItem="nTm-o3-9eI" firstAttribute="top" secondItem="3xF-Ix-pDm" secondAttribute="bottom" id="loa-yO-jl8"/>
+                            <constraint firstItem="3xF-Ix-pDm" firstAttribute="bottom" secondItem="nTm-o3-9eI" secondAttribute="top" id="bUn-U8-eiG"/>
+                            <constraint firstItem="3xF-Ix-pDm" firstAttribute="leading" secondItem="aev-3h-BgN" secondAttribute="leading" id="kJx-z0-u9R"/>
+                            <constraint firstItem="3xF-Ix-pDm" firstAttribute="top" secondItem="NSt-up-BDI" secondAttribute="bottom" id="rBY-nC-yhO"/>
+                            <constraint firstAttribute="trailing" secondItem="3xF-Ix-pDm" secondAttribute="trailing" id="sgm-ul-L4A"/>
                         </constraints>
                     </view>
                     <connections>
@@ -162,7 +124,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u2o-lv-INo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2690" y="1110"/>
+            <point key="canvasLocation" x="4710" y="1098"/>
         </scene>
         <!--자전거 대여정보 TableView-->
         <scene sceneID="rcs-F0-luF">
@@ -216,7 +178,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c8q-N9-aez" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4266.3999999999996" y="277.51124437781112"/>
+            <point key="canvasLocation" x="5205.6000000000004" y="277.51124437781112"/>
         </scene>
         <!--Weather Table View Controller-->
         <scene sceneID="fMx-Ms-mYg">
@@ -315,34 +277,6 @@
             </objects>
             <point key="canvasLocation" x="5609" y="-473"/>
         </scene>
-        <!--Good Food Table View Controller-->
-        <scene sceneID="aCX-EO-KL9">
-            <objects>
-                <tableViewController id="O2O-va-qeK" customClass="GoodFoodTableViewController" customModule="TermProject" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="baV-ju-M0B">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="착한음식점목록" id="pbd-Hw-A33">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pbd-Hw-A33" id="K4S-jp-4EV">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="O2O-va-qeK" id="mLJ-lD-Lhh"/>
-                            <outlet property="delegate" destination="O2O-va-qeK" id="g34-cb-yVl"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8Sn-g1-EsR" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3143" y="-958"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="4VV-0C-43p">
             <objects>
@@ -374,15 +308,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="REz-ux-9SU">
-                                <rect key="frame" x="16" y="64" width="343" height="603"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="REz-ux-9SU" firstAttribute="leading" secondItem="6xM-zI-tsQ" secondAttribute="leadingMargin" id="1Go-ea-fls"/>
-                            <constraint firstItem="Ppi-fv-075" firstAttribute="top" secondItem="REz-ux-9SU" secondAttribute="bottom" id="V5G-nq-HVE"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="REz-ux-9SU" secondAttribute="trailing" id="u1v-0c-6AX"/>
-                            <constraint firstItem="REz-ux-9SU" firstAttribute="top" secondItem="oGX-Rp-H5r" secondAttribute="bottom" id="xdc-fi-j9E"/>
+                            <constraint firstItem="REz-ux-9SU" firstAttribute="leading" secondItem="6xM-zI-tsQ" secondAttribute="leading" id="Owi-s1-OuY"/>
+                            <constraint firstAttribute="trailing" secondItem="REz-ux-9SU" secondAttribute="trailing" id="VZ0-tA-l76"/>
+                            <constraint firstItem="REz-ux-9SU" firstAttribute="top" secondItem="oGX-Rp-H5r" secondAttribute="bottom" id="egf-Sw-9Pw"/>
+                            <constraint firstItem="REz-ux-9SU" firstAttribute="bottom" secondItem="Ppi-fv-075" secondAttribute="top" id="zsM-mj-Gl0"/>
                         </constraints>
                     </view>
                     <connections>
@@ -391,7 +325,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kty-uM-QEm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1526" y="1797"/>
+            <point key="canvasLocation" x="1525.5999999999999" y="1796.8515742128936"/>
         </scene>
         <!--Detail Doc Table View Controller-->
         <scene sceneID="fP6-8Y-QeE">
@@ -440,6 +374,43 @@
             </objects>
             <point key="canvasLocation" x="544" y="1064"/>
         </scene>
+        <!--약국 위치 지정-->
+        <scene sceneID="ALD-ht-ACn">
+            <objects>
+                <viewController id="qHF-cV-W2H" customClass="DocPickerViewController" customModule="TermProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hha-Du-YeR"/>
+                        <viewControllerLayoutGuide type="bottom" id="2w6-h7-5g0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pN3-BB-Bab">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wb4-N7-cSw">
+                                <rect key="frame" x="27.5" y="225.5" width="320" height="216"/>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wb4-N7-cSw" firstAttribute="centerY" secondItem="pN3-BB-Bab" secondAttribute="centerY" id="4eY-mm-Iv1"/>
+                            <constraint firstItem="wb4-N7-cSw" firstAttribute="centerX" secondItem="pN3-BB-Bab" secondAttribute="centerX" id="92M-hQ-tIx"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="약국 위치 지정" id="PXI-Sg-r4c">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="search" id="hKa-6c-Wla">
+                            <connections>
+                                <segue destination="5ar-wX-Tdp" kind="show" identifier="segueToDocTable" id="lKp-D7-K2a"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="pickerView" destination="wb4-N7-cSw" id="W93-vZ-mbN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vJB-JZ-4U1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2327.1999999999998" y="321.58920539730138"/>
+        </scene>
         <!--약국정보-->
         <scene sceneID="14B-6P-Siv">
             <objects>
@@ -485,7 +456,7 @@
                     <navigationItem key="navigationItem" title="약국정보" id="hem-RS-R49">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="search" id="sZo-Pq-rzf">
                             <connections>
-                                <segue destination="PJ4-dc-aBu" kind="show" identifier="segueToMapView" id="Hmy-AC-H3H"/>
+                                <segue destination="PJ4-dc-aBu" kind="show" identifier="segueToDocMapView" id="Hmy-AC-H3H"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

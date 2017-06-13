@@ -15,16 +15,21 @@ class DocMapViewController: UIViewController, MKMapViewDelegate {
     
     var posts = NSMutableArray()
     
+    
+    var lat : Double!
+    
+    var lon : Double!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let initialLocation = CLLocation(latitude: 33.51941915384433, longitude: 126.56976660848167)
+        let initialLocation = CLLocation(latitude: lat, longitude: lon)
         
         centerMapOnLocation(location: initialLocation)
         
         mapView.delegate = self
         loadInitialData()
-        mapView.addAnnotations(hospitals)
+        mapView.addAnnotations(DocLocations)
         
         // Do any additional setup after loading the view.
     }
@@ -37,7 +42,7 @@ class DocMapViewController: UIViewController, MKMapViewDelegate {
         mapView.setRegion(coordinateRegion, animated: true)
     }
     
-    var hospitals = [DocLocation]()
+    var DocLocations = [DocLocation]()
     
     func loadInitialData() {
         for post in posts {
@@ -45,10 +50,10 @@ class DocMapViewController: UIViewController, MKMapViewDelegate {
             let addr = (post as AnyObject).value(forKey: "dutyAddr") as! NSString as String
             let XPos = (post as AnyObject).value(forKey: "wgs84Lat") as! NSString as String
             let YPos = (post as AnyObject).value(forKey: "wgs84Lon") as! NSString as String
-            let lat = (YPos as NSString).doubleValue
-            let lon = (XPos as NSString).doubleValue
+            let lat = (XPos as NSString).doubleValue
+            let lon = (YPos as NSString).doubleValue
             let docLocation = DocLocation(title: yadmNm, locationName: addr, coordinate: CLLocationCoordinate2D(latitude: lat, longitude: lon))
-            hospitals.append(docLocation)
+            DocLocations.append(docLocation)
         }
     }
     

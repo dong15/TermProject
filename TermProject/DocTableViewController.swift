@@ -7,15 +7,18 @@
 //
 
 import UIKit
+import CoreLocation
 
-class DocTableViewController: UITableViewController, XMLParserDelegate {
+class DocTableViewController: UITableViewController, XMLParserDelegate, CLLocationManagerDelegate  {
 
     @IBOutlet var taData: UITableView!
     
     
-    var url : String = "http://apis.data.go.kr/B552657/ErmctInsttInfoInqireService/getParmacyListInfoInqire?serviceKey=8dzkLURtf3us0Ilf7eEKM5v4JuAyld82MfWecCK0xRWQOdtncpLQ8n8ja1UpdbaARNtc4JVBNnwSsT4ZKz0qqw%3D%3D&Q0=%EC%A0%9C%EC%A3%BC%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84&Q1=%EC%A0%9C%EC%A3%BC%EC%8B%9C&QT=1&ORD=NAME&pageNo=1&startPage=1&numOfRows=100&pageSize=100"
+    var url : String?
     
-    var Durl1 : String = "http://apis.data.go.kr/B552657/ErmctInsttInfoInqireService/getParmacyListInfoInqire?serviceKey=8dzkLURtf3us0Ilf7eEKM5v4JuAyld82MfWecCK0xRWQOdtncpLQ8n8ja1UpdbaARNtc4JVBNnwSsT4ZKz0qqw%3D%3D&Q0=%EC%A0%9C%EC%A3%BC%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84&Q1=%EC%A0%9C%EC%A3%BC%EC%8B%9C&QT=1"
+    
+    var Durl1 : String?
+
     var Durl2 : String = "&ORD=NAME&pageNo=1&startPage=1&numOfRows=1&pageSize=1"
     
     var FDurl : String = ""
@@ -39,6 +42,13 @@ class DocTableViewController: UITableViewController, XMLParserDelegate {
     var docname = ""
     var docname_utf8 = ""
     
+    var lat = 33.492027
+    
+    var lon = 126.72714
+    
+    var locationManager:CLLocationManager!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         beginParsing()
@@ -48,10 +58,18 @@ class DocTableViewController: UITableViewController, XMLParserDelegate {
     func beginParsing()
     {
         posts = []
-        parser = XMLParser(contentsOf:(URL(string:url))!)!
+        parser = XMLParser(contentsOf:(URL(string:url!))!)!
         parser.delegate = self
         parser.parse()
         taData!.reloadData()
+        
+        locationManager = CLLocationManager()
+        locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization() //권한 요청
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.startUpdatingLocation()
+        lon = (locationManager.location?.coordinate.longitude)!
+        lat = (locationManager.location?.coordinate.latitude)!
     }
     
     func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String])
@@ -106,9 +124,11 @@ class DocTableViewController: UITableViewController, XMLParserDelegate {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "segueToMapView" {
+        if segue.identifier == "segueToDocMapView" {
             if let mapViewController = segue.destination as? DocMapViewController {
                 mapViewController.posts = posts
+                mapViewController.lat = lat
+                mapViewController.lon = lon
             }
         }
         
@@ -118,7 +138,7 @@ class DocTableViewController: UITableViewController, XMLParserDelegate {
                 docname = (posts.object(at: (indexPath?.row)!) as AnyObject).value(forKey: "dutyName") as! NSString as String
                 docname_utf8 = docname.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
                 if let detailDocTableViewController = segue.destination as? DetailDocTableViewController {
-                    FDurl = Durl1 + "&QN=" + docname_utf8 + Durl2
+                    FDurl = Durl1! + "&QN=" + docname_utf8 + Durl2
                     detailDocTableViewController.url = FDurl                }
             }
         }

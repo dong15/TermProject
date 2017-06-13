@@ -17,7 +17,7 @@
 		784A022C1EDD1EDD00132970 /* DocTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784A022B1EDD1EDD00132970 /* DocTableViewController.swift */; };
 		784A022E1EDD22F500132970 /* DetailDocTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784A022D1EDD22F500132970 /* DetailDocTableViewController.swift */; };
 		784A02301EDDCF8D00132970 /* WeatherTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784A022F1EDDCF8D00132970 /* WeatherTableViewController.swift */; };
-		788DAE811EC2FB3800346695 /* GoodFoodTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788DAE801EC2FB3800346695 /* GoodFoodTableViewController.swift */; };
+		785E45B61EEBE7F500EFBB91 /* DocPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785E45B51EEBE7F500EFBB91 /* DocPickerViewController.swift */; };
 		78F63E401ED56CC3002360BB /* DocMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F63E3F1ED56CC3002360BB /* DocMapViewController.swift */; };
 		78F63E421ED56D25002360BB /* BicMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F63E411ED56D25002360BB /* BicMapViewController.swift */; };
 		78F63E441EDB0A58002360BB /* BicTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F63E431EDB0A58002360BB /* BicTableViewController.swift */; };
@@ -37,7 +37,7 @@
 		784A022B1EDD1EDD00132970 /* DocTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocTableViewController.swift; sourceTree = "<group>"; };
 		784A022D1EDD22F500132970 /* DetailDocTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailDocTableViewController.swift; sourceTree = "<group>"; };
 		784A022F1EDDCF8D00132970 /* WeatherTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherTableViewController.swift; sourceTree = "<group>"; };
-		788DAE801EC2FB3800346695 /* GoodFoodTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoodFoodTableViewController.swift; sourceTree = "<group>"; };
+		785E45B51EEBE7F500EFBB91 /* DocPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocPickerViewController.swift; sourceTree = "<group>"; };
 		78F63E3F1ED56CC3002360BB /* DocMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocMapViewController.swift; sourceTree = "<group>"; };
 		78F63E411ED56D25002360BB /* BicMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BicMapViewController.swift; sourceTree = "<group>"; };
 		78F63E431EDB0A58002360BB /* BicTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BicTableViewController.swift; sourceTree = "<group>"; };
@@ -80,16 +80,16 @@
 				780562EE1EC15F19007F1DAE /* Assets.xcassets */,
 				780562F01EC15F19007F1DAE /* LaunchScreen.storyboard */,
 				780562F31EC15F19007F1DAE /* Info.plist */,
-				788DAE801EC2FB3800346695 /* GoodFoodTableViewController.swift */,
-				78F63E3F1ED56CC3002360BB /* DocMapViewController.swift */,
 				78F63E411ED56D25002360BB /* BicMapViewController.swift */,
 				78F63E431EDB0A58002360BB /* BicTableViewController.swift */,
 				78F63E451EDB40DE002360BB /* BicLocation.swift */,
 				784A02291EDD1B5300132970 /* DocLocation.swift */,
+				78F63E3F1ED56CC3002360BB /* DocMapViewController.swift */,
 				784A022B1EDD1EDD00132970 /* DocTableViewController.swift */,
 				784A022D1EDD22F500132970 /* DetailDocTableViewController.swift */,
 				784A022F1EDDCF8D00132970 /* WeatherTableViewController.swift */,
 				7832B8221EE2C9A700236AF6 /* DetailWeatherTableViewController.swift */,
+				785E45B51EEBE7F500EFBB91 /* DocPickerViewController.swift */,
 			);
 			path = TermProject;
 			sourceTree = "<group>";
@@ -174,8 +174,8 @@
 				784A022A1EDD1B5300132970 /* DocLocation.swift in Sources */,
 				784A02301EDDCF8D00132970 /* WeatherTableViewController.swift in Sources */,
 				780562EA1EC15F19007F1DAE /* ViewController.swift in Sources */,
+				785E45B61EEBE7F500EFBB91 /* DocPickerViewController.swift in Sources */,
 				78F63E461EDB40DE002360BB /* BicLocation.swift in Sources */,
-				788DAE811EC2FB3800346695 /* GoodFoodTableViewController.swift in Sources */,
 				784A022C1EDD1EDD00132970 /* DocTableViewController.swift in Sources */,
 				780562E81EC15F19007F1DAE /* AppDelegate.swift in Sources */,
 				7832B8231EE2C9A700236AF6 /* DetailWeatherTableViewController.swift in Sources */,
