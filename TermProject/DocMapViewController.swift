@@ -20,6 +20,7 @@ class DocMapViewController: UIViewController, MKMapViewDelegate {
     
     var lon : Double!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

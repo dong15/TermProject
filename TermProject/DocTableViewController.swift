@@ -27,6 +27,8 @@ class DocTableViewController: UITableViewController, XMLParserDelegate, CLLocati
     
     var posts = NSMutableArray()
     
+    var Nearposts = NSMutableArray()
+    
     var elements = NSMutableDictionary()
     
     var element = NSString()
@@ -46,6 +48,10 @@ class DocTableViewController: UITableViewController, XMLParserDelegate, CLLocati
     
     var lon = 126.72714
     
+    var howlong = 1000000000000000.1000000000
+    
+    var NyadmNm = NSMutableString()
+    
     var locationManager:CLLocationManager!
     
     
@@ -58,6 +64,8 @@ class DocTableViewController: UITableViewController, XMLParserDelegate, CLLocati
     func beginParsing()
     {
         posts = []
+        Nearposts = []
+        NyadmNm = ""
         parser = XMLParser(contentsOf:(URL(string:url!))!)!
         parser.delegate = self
         parser.parse()
@@ -101,6 +109,7 @@ class DocTableViewController: UITableViewController, XMLParserDelegate, CLLocati
         } else if element.isEqual(to: "wgs84Lon") {
             YPos.append(string)
         }
+        
     }
     
     func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
@@ -117,7 +126,9 @@ class DocTableViewController: UITableViewController, XMLParserDelegate, CLLocati
             if !YPos.isEqual(nil) {
                 elements.setObject(YPos, forKey: "wgs84Lon" as NSCopying)
             }
-            
+            if NyadmNm == yadmNm {
+                Nearposts.add(elements)
+            }
             
             posts.add(elements)
         }
@@ -140,6 +151,13 @@ class DocTableViewController: UITableViewController, XMLParserDelegate, CLLocati
                 if let detailDocTableViewController = segue.destination as? DetailDocTableViewController {
                     FDurl = Durl1! + "&QN=" + docname_utf8 + Durl2
                     detailDocTableViewController.url = FDurl                }
+            }
+        }
+        if segue.identifier == "segueToNearDoc" {
+            if let NearMapViewController = segue.destination as? DocMapViewController {
+                NearMapViewController.posts = Nearposts
+                NearMapViewController.lat = lat
+                NearMapViewController.lon = lon
             }
         }
     }

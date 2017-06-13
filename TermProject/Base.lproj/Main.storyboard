@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -17,31 +18,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <imageView key="tableHeaderView" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="KakaoTalk_Photo_2017-06-13-19-30-25_53.png" id="rcg-Fk-oq9">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="476"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
                         <sections>
                             <tableViewSection id="faU-oI-abR">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="기상정보" textLabel="fRa-5M-Qf0" style="IBUITableViewCellStyleDefault" id="rnC-8b-cEg">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rnC-8b-cEg" id="KUS-ZZ-azN">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="기상정보" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fRa-5M-Qf0">
-                                                    <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="ncl-4k-PEt" kind="show" identifier="segueToWeather" id="lz7-Bq-0BL"/>
-                                        </connections>
-                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="자전거 대여정보" textLabel="Ge1-U7-2It" style="IBUITableViewCellStyleDefault" id="2wW-dq-287">
-                                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="476" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2wW-dq-287" id="NKF-hT-wMF">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -61,7 +46,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="주변 약국정보" textLabel="9eh-vb-DyW" style="IBUITableViewCellStyleDefault" id="AzD-aD-ndt">
-                                        <rect key="frame" x="0.0" y="88" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="520" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AzD-aD-ndt" id="FBV-07-GGR">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -134,9 +119,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <imageView key="tableHeaderView" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="KakaoTalk_Photo_2017-06-13-19-57-01_82.png" id="hCz-1n-qrf">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="5Te-gV-sAp" detailTextLabel="cld-1W-8Hs" style="IBUITableViewCellStyleSubtitle" id="ggw-8b-kc3">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ggw-8b-kc3" id="Gys-aB-YxI">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -179,103 +168,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c8q-N9-aez" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5205.6000000000004" y="277.51124437781112"/>
-        </scene>
-        <!--Weather Table View Controller-->
-        <scene sceneID="fMx-Ms-mYg">
-            <objects>
-                <tableViewController id="ncl-4k-PEt" customClass="WeatherTableViewController" customModule="TermProject" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="d9a-zh-JAh">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="E8A-9s-ydb" detailTextLabel="Pme-19-LSS" style="IBUITableViewCellStyleSubtitle" id="Nco-VP-0t2">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Nco-VP-0t2" id="ibe-AC-RaF">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="E8A-9s-ydb">
-                                            <rect key="frame" x="15" y="5" width="33.5" height="20.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Pme-19-LSS">
-                                            <rect key="frame" x="15" y="25.5" width="44" height="14.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="0AM-x8-HHP" kind="show" identifier="segueToWeatherDetail" id="wsA-Ml-TtC"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="ncl-4k-PEt" id="mKf-ZL-YOb"/>
-                            <outlet property="delegate" destination="ncl-4k-PEt" id="RB2-Bw-od1"/>
-                        </connections>
-                    </tableView>
-                    <connections>
-                        <outlet property="taData" destination="d9a-zh-JAh" id="5Wc-U6-KVl"/>
-                    </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fYq-uL-qPc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4266" y="-483"/>
-        </scene>
-        <!--Detail Weather Table View Controller-->
-        <scene sceneID="pFQ-pe-mJu">
-            <objects>
-                <tableViewController id="0AM-x8-HHP" customClass="DetailWeatherTableViewController" customModule="TermProject" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Yvu-zk-dDX">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="WeatherCell" textLabel="dSg-8t-4e1" detailTextLabel="l74-JW-4QC" style="IBUITableViewCellStyleSubtitle" id="Q48-Mx-whp">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Q48-Mx-whp" id="pjl-7t-x2c">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dSg-8t-4e1">
-                                            <rect key="frame" x="15" y="5" width="33.5" height="20.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="l74-JW-4QC">
-                                            <rect key="frame" x="15" y="25.5" width="44" height="14.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="0AM-x8-HHP" id="gQC-it-4Pl"/>
-                            <outlet property="delegate" destination="0AM-x8-HHP" id="bNd-Xx-Dz7"/>
-                        </connections>
-                    </tableView>
-                    <connections>
-                        <outlet property="detailTableView" destination="Yvu-zk-dDX" id="h6M-8x-PMC"/>
-                    </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JAx-WF-1lN" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5609" y="-473"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4VV-0C-43p">
@@ -389,11 +281,19 @@
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wb4-N7-cSw">
                                 <rect key="frame" x="27.5" y="225.5" width="320" height="216"/>
                             </pickerView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sJN-06-DfI">
+                                <rect key="frame" x="16" y="64" width="343" height="151.5"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="wb4-N7-cSw" firstAttribute="centerY" secondItem="pN3-BB-Bab" secondAttribute="centerY" id="4eY-mm-Iv1"/>
                             <constraint firstItem="wb4-N7-cSw" firstAttribute="centerX" secondItem="pN3-BB-Bab" secondAttribute="centerX" id="92M-hQ-tIx"/>
+                            <constraint firstItem="sJN-06-DfI" firstAttribute="top" secondItem="hha-Du-YeR" secondAttribute="bottom" id="B3P-VB-O00"/>
+                            <constraint firstItem="sJN-06-DfI" firstAttribute="centerX" secondItem="pN3-BB-Bab" secondAttribute="centerX" id="HUG-PZ-vkq"/>
+                            <constraint firstItem="sJN-06-DfI" firstAttribute="leading" secondItem="pN3-BB-Bab" secondAttribute="leadingMargin" id="RiH-dH-s0R"/>
+                            <constraint firstItem="wb4-N7-cSw" firstAttribute="top" secondItem="sJN-06-DfI" secondAttribute="bottom" constant="10" id="e9R-Mo-f6b"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="sJN-06-DfI" secondAttribute="trailing" id="jLf-9i-0DT"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="약국 위치 지정" id="PXI-Sg-r4c">
@@ -409,9 +309,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vJB-JZ-4U1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2327.1999999999998" y="321.58920539730138"/>
+            <point key="canvasLocation" x="1526" y="304"/>
         </scene>
-        <!--약국정보-->
+        <!--Doc Table View Controller-->
         <scene sceneID="14B-6P-Siv">
             <objects>
                 <tableViewController id="5ar-wX-Tdp" customClass="DocTableViewController" customModule="TermProject" customModuleProvider="target" sceneMemberID="viewController">
@@ -419,9 +319,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <imageView key="tableHeaderView" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="KakaoTalk_Photo_2017-06-13-19-57-00_71.png" id="Lj6-60-t98">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="GuV-Tn-4hm" detailTextLabel="OGc-xe-89n" style="IBUITableViewCellStyleSubtitle" id="JB4-Vv-1nj">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JB4-Vv-1nj" id="DJj-AW-Ao0">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -453,7 +357,16 @@
                             <outlet property="delegate" destination="5ar-wX-Tdp" id="88O-jn-FaO"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="약국정보" id="hem-RS-R49">
+                    <navigationItem key="navigationItem" id="hem-RS-R49">
+                        <nil key="title"/>
+                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Tca-hB-a8C">
+                            <rect key="frame" x="112.5" y="7" width="150" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="근처약국"/>
+                            <connections>
+                                <segue destination="PJ4-dc-aBu" kind="show" identifier="segueToNearDoc" id="MP7-nf-eAl"/>
+                            </connections>
+                        </button>
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="search" id="sZo-Pq-rzf">
                             <connections>
                                 <segue destination="PJ4-dc-aBu" kind="show" identifier="segueToDocMapView" id="Hmy-AC-H3H"/>
@@ -469,4 +382,12 @@
             <point key="canvasLocation" x="1526" y="1054"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="KakaoTalk_Photo_2017-06-13-19-30-25_53.png" width="577" height="476"/>
+        <image name="KakaoTalk_Photo_2017-06-13-19-57-00_71.png" width="577" height="108"/>
+        <image name="KakaoTalk_Photo_2017-06-13-19-57-01_82.png" width="577" height="108"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="MP7-nf-eAl"/>
+    </inferredMetricsTieBreakers>
 </document>
