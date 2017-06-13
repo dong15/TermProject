@@ -41,12 +41,17 @@ class DocTableViewController: UITableViewController, XMLParserDelegate, CLLocati
     
     var YPos = NSMutableString()
     
+    var LX = Double()
+    var LY = Double()
+    
+    var LXY = Double()
+    
     var docname = ""
     var docname_utf8 = ""
     
-    var lat = 33.492027
+    var lat = 33.44981457698432
     
-    var lon = 126.72714
+    var lon = 126.9150117992059
     
     var howlong = 1000000000000000.1000000000
     
@@ -76,8 +81,8 @@ class DocTableViewController: UITableViewController, XMLParserDelegate, CLLocati
         locationManager.requestWhenInUseAuthorization() //권한 요청
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.startUpdatingLocation()
-        lon = (locationManager.location?.coordinate.longitude)!
-        lat = (locationManager.location?.coordinate.latitude)!
+        //lon = (locationManager.location?.coordinate.longitude)!
+        //lat = (locationManager.location?.coordinate.latitude)!
     }
     
     func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String])
@@ -96,6 +101,14 @@ class DocTableViewController: UITableViewController, XMLParserDelegate, CLLocati
             XPos = ""
             YPos = NSMutableString()
             YPos = ""
+            
+            LX = Double()
+            LX = 0.0
+            LY = Double()
+            LY = 0.0
+            
+            LXY = Double()
+            LXY = 0.0
         }
     }
     
@@ -106,8 +119,14 @@ class DocTableViewController: UITableViewController, XMLParserDelegate, CLLocati
             addr.append(string)
         } else if element.isEqual(to: "wgs84Lat") {
             XPos.append(string)
+            LX = lat - (XPos as NSString).doubleValue
         } else if element.isEqual(to: "wgs84Lon") {
             YPos.append(string)
+            LY = lon - (XPos as NSString).doubleValue
+            LXY = (LX * LX) + (LY * LY)
+            if howlong > LXY {
+                howlong = LXY
+            }
         }
         
     }
@@ -126,7 +145,8 @@ class DocTableViewController: UITableViewController, XMLParserDelegate, CLLocati
             if !YPos.isEqual(nil) {
                 elements.setObject(YPos, forKey: "wgs84Lon" as NSCopying)
             }
-            if NyadmNm == yadmNm {
+            if howlong == LXY {
+                Nearposts.removeAllObjects()
                 Nearposts.add(elements)
             }
             
