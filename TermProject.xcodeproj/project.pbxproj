@@ -21,6 +21,7 @@
 		785E45B81EEFF66E00EFBB91 /* KakaoTalk_Photo_2017-06-13-19-30-25_53.png in Resources */ = {isa = PBXBuildFile; fileRef = 785E45B71EEFF66E00EFBB91 /* KakaoTalk_Photo_2017-06-13-19-30-25_53.png */; };
 		785E45BB1EEFFC9900EFBB91 /* KakaoTalk_Photo_2017-06-13-19-57-00_71.png in Resources */ = {isa = PBXBuildFile; fileRef = 785E45B91EEFFC9900EFBB91 /* KakaoTalk_Photo_2017-06-13-19-57-00_71.png */; };
 		785E45BC1EEFFC9900EFBB91 /* KakaoTalk_Photo_2017-06-13-19-57-01_82.png in Resources */ = {isa = PBXBuildFile; fileRef = 785E45BA1EEFFC9900EFBB91 /* KakaoTalk_Photo_2017-06-13-19-57-01_82.png */; };
+		787D45321EF11D2A003278E4 /* 지역선택.png in Resources */ = {isa = PBXBuildFile; fileRef = 787D45311EF11D2A003278E4 /* 지역선택.png */; };
 		78F63E401ED56CC3002360BB /* DocMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F63E3F1ED56CC3002360BB /* DocMapViewController.swift */; };
 		78F63E421ED56D25002360BB /* BicMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F63E411ED56D25002360BB /* BicMapViewController.swift */; };
 		78F63E441EDB0A58002360BB /* BicTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F63E431EDB0A58002360BB /* BicTableViewController.swift */; };
@@ -44,6 +45,7 @@
 		785E45B71EEFF66E00EFBB91 /* KakaoTalk_Photo_2017-06-13-19-30-25_53.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "KakaoTalk_Photo_2017-06-13-19-30-25_53.png"; sourceTree = "<group>"; };
 		785E45B91EEFFC9900EFBB91 /* KakaoTalk_Photo_2017-06-13-19-57-00_71.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "KakaoTalk_Photo_2017-06-13-19-57-00_71.png"; sourceTree = "<group>"; };
 		785E45BA1EEFFC9900EFBB91 /* KakaoTalk_Photo_2017-06-13-19-57-01_82.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "KakaoTalk_Photo_2017-06-13-19-57-01_82.png"; sourceTree = "<group>"; };
+		787D45311EF11D2A003278E4 /* 지역선택.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "지역선택.png"; sourceTree = "<group>"; };
 		78F63E3F1ED56CC3002360BB /* DocMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocMapViewController.swift; sourceTree = "<group>"; };
 		78F63E411ED56D25002360BB /* BicMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BicMapViewController.swift; sourceTree = "<group>"; };
 		78F63E431EDB0A58002360BB /* BicTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BicTableViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				785E45B91EEFFC9900EFBB91 /* KakaoTalk_Photo_2017-06-13-19-57-00_71.png */,
 				785E45BA1EEFFC9900EFBB91 /* KakaoTalk_Photo_2017-06-13-19-57-01_82.png */,
 				785E45B71EEFF66E00EFBB91 /* KakaoTalk_Photo_2017-06-13-19-30-25_53.png */,
+				787D45311EF11D2A003278E4 /* 지역선택.png */,
 				780562E71EC15F19007F1DAE /* AppDelegate.swift */,
 				780562E91EC15F19007F1DAE /* ViewController.swift */,
 				780562EB1EC15F19007F1DAE /* Main.storyboard */,
@@ -169,6 +172,7 @@
 				785E45BB1EEFFC9900EFBB91 /* KakaoTalk_Photo_2017-06-13-19-57-00_71.png in Resources */,
 				780562EF1EC15F19007F1DAE /* Assets.xcassets in Resources */,
 				780562ED1EC15F19007F1DAE /* Main.storyboard in Resources */,
+				787D45321EF11D2A003278E4 /* 지역선택.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

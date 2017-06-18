@@ -281,7 +281,7 @@
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wb4-N7-cSw">
                                 <rect key="frame" x="27.5" y="225.5" width="320" height="216"/>
                             </pickerView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sJN-06-DfI">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="지역선택.png" translatesAutoresizingMaskIntoConstraints="NO" id="sJN-06-DfI">
                                 <rect key="frame" x="16" y="64" width="343" height="151.5"/>
                             </imageView>
                         </subviews>
@@ -383,9 +383,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="KakaoTalk_Photo_2017-06-13-19-30-25_53.png" width="577" height="476"/>
+        <image name="KakaoTalk_Photo_2017-06-13-19-30-25_53.png" width="1024" height="1024"/>
         <image name="KakaoTalk_Photo_2017-06-13-19-57-00_71.png" width="577" height="108"/>
         <image name="KakaoTalk_Photo_2017-06-13-19-57-01_82.png" width="577" height="108"/>
+        <image name="지역선택.png" width="577" height="476"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="MP7-nf-eAl"/>
