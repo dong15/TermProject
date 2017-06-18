@@ -81,8 +81,8 @@ class DocTableViewController: UITableViewController, XMLParserDelegate, CLLocati
         locationManager.requestWhenInUseAuthorization() //권한 요청
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.startUpdatingLocation()
-        //lon = (locationManager.location?.coordinate.longitude)!
-        //lat = (locationManager.location?.coordinate.latitude)!
+        lon = (locationManager.location?.coordinate.longitude)!
+        lat = (locationManager.location?.coordinate.latitude)!
     }
     
     func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String])
